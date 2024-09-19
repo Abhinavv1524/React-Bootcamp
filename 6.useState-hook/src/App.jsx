@@ -5,17 +5,6 @@ import FoodItems from "./components/FoodItems";
 import Container from "./components/Container";
 import Input from "./components/Input";
 function App() {
-  // let foodItemsArr = useState([
-  //   "Dal",
-  //   "Green vegetables",
-  //   "Roti",
-  //   "Salad",
-  //   "Milk",
-  //   "Ghee",
-  // ]);
-  // let foodItems = foodItemsArr[0];
-  // let setFoodState = foodItemsArr[1];
-
   const [foodItems, setFoodState] = useState([
     "Dal",
     "Green vegetables",
@@ -24,10 +13,6 @@ function App() {
     "Milk",
     "Ghee",
   ]);
-
-  // let textStateArr = useState("");
-  // let value = textStateArr[0];
-  // let setTextstate = textStateArr[1];
 
   const [value, setTextstate] = useState("");
 
@@ -48,6 +33,7 @@ function App() {
       <Container>
         <h1>Healthy Foods</h1>
         <Input keyPressed={handledByButton} valueAdded={valueAdded}></Input>
+        <p>The Messages typed is {value}</p>
         <ErrorMessage foodItems={foodItems}></ErrorMessage>
         <FoodItems foodItems={foodItems}></FoodItems>
       </Container>
