@@ -1,0 +1,20 @@
+.buttonsContainer{
+    display: flex;
+    justify-content:space-around;
+    flex-wrap: wrap;
+}
+
+.buttonsContainer button{
+    background-color: rgb(202, 230, 255);
+    width: 65px;
+    height: 65px;
+    margin: 10px 10px;
+    transition: background-color ease-in-out .3s;
+    font-weight: 700;
+    font-size: 20px;
+    border-radius: 15px;
+}
+
+.buttonsContainer button:hover{
+    background-color: aliceblue;
+}

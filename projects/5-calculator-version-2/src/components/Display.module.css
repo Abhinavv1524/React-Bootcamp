@@ -1,0 +1,9 @@
+.display{
+    background-color: hsl(200, 100%, 99%);
+    margin: 10px;
+    width: 278px ;
+    font-size: 35px;
+    padding: 5px 10px;
+    text-align: right;
+    border-radius: 12px;
+}

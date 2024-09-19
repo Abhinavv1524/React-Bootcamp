@@ -1,0 +1,22 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.calculator{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 3px solid rgba(0, 0, 0, 0.511);
+    width: 300px;
+    border-radius: 20px;
+    background-color: rgba(135, 200, 253, 0.135);
+}
