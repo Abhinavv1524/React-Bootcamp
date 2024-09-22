@@ -7,7 +7,7 @@ import { useState } from "react";
 import WelcomeMessage from "./components/WelcomeMessage";
 function App() {
   const addItem = (itemName, itemDate) => {
-    console.log(`Item added ${itemName} and date ${itemDate}`);
+    // console.log(`Item added ${itemName} and date ${itemDate}`);
     if (itemName.length == 0 || itemDate.length == 0) {
     } else {
       itemState([...itemValue, { name: itemName, dueDate: itemDate }]);
@@ -24,7 +24,7 @@ function App() {
       item.name !== deletedTodoItem;
     });
     itemState(newTodoItems);
-    console.log(`deleted item ${deletedTodoItem}`);
+    // console.log(`deleted item ${deletedTodoItem}`);
   };
   return (
     <center className="todo-container">
