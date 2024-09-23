@@ -15,7 +15,7 @@ export function AddTodo({ itemToBeAdded }) {
     itemToBeAdded(itemName, itemDate);
     itemDateElement.current.value;
     itemNameElement.current.value;
-    console.log(itemName);
+    // console.log(itemName);
   };
   return (
     <div className="container text-center">

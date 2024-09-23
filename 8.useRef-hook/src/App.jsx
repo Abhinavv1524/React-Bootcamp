@@ -8,9 +8,14 @@ import WelcomeMessage from "./components/WelcomeMessage";
 function App() {
   const addItem = (itemName, itemDate) => {
     // console.log(`Item added ${itemName} and date ${itemDate}`);
-    if (itemName.length == 0 || itemDate.length == 0) {
+    if (itemName.length === 0 || itemDate.length === 0) {
     } else {
-      itemState([...itemValue, { name: itemName, dueDate: itemDate }]);
+      //itemState([...itemValue, { name: itemName, dueDate: itemDate }]);
+      //functionaly updting the value here
+      itemState((currentVal) => {
+        let newItems = [...currentVal, { name: itemName, dueDate: itemDate }];
+        return newItems;
+      });
     }
     // itemState([...itemValue, { name: itemName, dueDate: itemDate }]);
     // console.log(itemValue);
