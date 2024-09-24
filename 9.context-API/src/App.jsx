@@ -7,30 +7,7 @@ import { useState } from "react";
 import WelcomeMessage from "./components/WelcomeMessage";
 import { TodoItemsContext } from "./store/todo-items-store";
 function App() {
-  const addItem = (itemName, itemDate) => {
-    // console.log(`Item added ${itemName} and date ${itemDate}`);
-    if (itemName.length === 0 || itemDate.length === 0) {
-    } else {
-      //itemState([...itemValue, { name: itemName, dueDate: itemDate }]);
-      //functionaly updting the value here
-      itemState((currentVal) => {
-        let newItems = [...currentVal, { name: itemName, dueDate: itemDate }];
-        return newItems;
-      });
-    }
-    // itemState([...itemValue, { name: itemName, dueDate: itemDate }]);
-    // console.log(itemValue);
-  };
-
   const [itemValue, itemState] = useState([]);
-
-  const itemToBeDeleted = (deletedTodoItem) => {
-    const newTodoItems = itemValue.filter((item) => {
-      item.name !== deletedTodoItem;
-    });
-    itemState(newTodoItems);
-    // console.log(`deleted item ${deletedTodoItem}`);
-  };
 
   const addNewItem = (itemName, itemDate) => {
     if (itemName.length === 0 || itemDate.length === 0) {
@@ -41,6 +18,7 @@ function App() {
       });
     }
   };
+
   const deleteNewItem = (deletedTodoItem) => {
     const newTodoItems = itemValue.filter((item) => {
       item.name !== deletedTodoItem;
