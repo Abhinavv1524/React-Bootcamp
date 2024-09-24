@@ -1,5 +1,6 @@
-import { useRef } from "react";
+import { useContext, useRef } from "react";
 import { IoMdAddCircleOutline } from "react-icons/io";
+import { TodoItemsContext } from "../store/todo-items-store";
 export function AddTodo({ itemToBeAdded }) {
   // let itemName = document.getElementById("nameValue");
   // let itemDate = document.getElementById();
@@ -7,12 +8,13 @@ export function AddTodo({ itemToBeAdded }) {
   const itemNameElement = useRef();
   const itemDateElement = useRef();
 
+  const { addNewItem } = useContext(TodoItemsContext);
   const handleButtonClicked = (event) => {
     event.preventDefault();
     //console.log(event);
     const itemName = itemNameElement.current.value;
     const itemDate = itemDateElement.current.value;
-    itemToBeAdded(itemName, itemDate);
+    addNewItem(itemName, itemDate);
     itemDateElement.current.value = "";
     itemNameElement.current.value = "";
     // console.log(itemName);

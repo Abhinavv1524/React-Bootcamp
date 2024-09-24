@@ -32,15 +32,30 @@ function App() {
     // console.log(`deleted item ${deletedTodoItem}`);
   };
 
-  let defaultItems = [{ name: "ghee", dueDate: "10.02.2" }];
+  const addNewItem = (itemName, itemDate) => {
+    if (itemName.length === 0 || itemDate.length === 0) {
+    } else {
+      itemState((currentVal) => {
+        let newItems = [...currentVal, { name: itemName, dueDate: itemDate }];
+        return newItems;
+      });
+    }
+  };
+  const deleteNewItem = (deletedTodoItem) => {
+    const newTodoItems = itemValue.filter((item) => {
+      item.name !== deletedTodoItem;
+    });
+    itemState(newTodoItems);
+    // console.log(`deleted item ${deletedTodoItem}`);
+  };
+
   return (
-    <TodoItemsContext.Provider value={itemValue}>
+    <TodoItemsContext.Provider value={{ itemValue, addNewItem, deleteNewItem }}>
       <center className="todo-container">
         <AppName />
-        <AddTodo itemToBeAdded={addItem} />
+        <AddTodo />
         <WelcomeMessage></WelcomeMessage>
-
-        <TodoItems clickToDelete={itemToBeDeleted}></TodoItems>
+        <TodoItems></TodoItems>
       </center>
     </TodoItemsContext.Provider>
   );

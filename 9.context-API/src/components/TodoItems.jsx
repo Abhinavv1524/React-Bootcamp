@@ -2,11 +2,11 @@ import { useContext } from "react";
 import { TodoItemsContext } from "../store/todo-items-store";
 import TodoItem from "./TodoItem";
 const TodoItems = ({ clickToDelete }) => {
-  const todoItems = useContext(TodoItemsContext);
-  console.log(todoItems);
+  const { itemValue } = useContext(TodoItemsContext);
+  console.log(itemValue);
   return (
     <div className="items">
-      {todoItems.map((item) => (
+      {itemValue.map((item) => (
         <TodoItem
           key={item}
           todoName={item.name}
