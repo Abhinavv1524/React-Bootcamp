@@ -10,3 +10,13 @@
 .post-card{
     margin:20px;
 }
+.create-post{
+    margin: 10%;
+    width: 80%;
+}
+.post-class{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}

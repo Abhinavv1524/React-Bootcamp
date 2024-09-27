@@ -24,7 +24,7 @@ const Post = ({ post }) => {
           </span>
         ))}
         <div className="alert alert-success my-2" role="alert">
-          A simple success alert—check it out!
+          {`${post.reactions} persons havs liked your post`}
         </div>
       </div>
     </div>
