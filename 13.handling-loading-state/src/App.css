@@ -1,0 +1,25 @@
+.app-container{
+    display: flex;
+}
+.content {
+    width: 100%;
+}
+.sidebar{
+    min-height: 695px;
+}
+.post-card{
+    margin:20px;
+}
+.create-post{
+    margin: 10%;
+    width: 80%;
+}
+.post-class{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.spin{
+    margin: 20%;
+}
