@@ -1,0 +1,34 @@
+import { useContext } from "react";
+import { MdDeleteOutline } from "react-icons/md";
+import { PostList } from "../store/Post-list-store";
+
+const Post = ({ post }) => {
+  const { deletePost } = useContext(PostList);
+  return (
+    <div className="card post-card" style={{ width: "30rem" }}>
+      <div className="card-body ">
+        <h5 className="card-title">
+          {post.title}
+          <span
+            key={post.id}
+            className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+            onClick={() => deletePost(post.id)}
+          >
+            <MdDeleteOutline />
+          </span>
+        </h5>
+        <p className="card-text">{post.body}</p>
+        {post.tags.map((tag) => (
+          <span className="badge text-bg-primary mx-1" key={tag}>
+            {tag}
+          </span>
+        ))}
+        <div className="alert alert-success my-2" role="alert">
+          {`${post.reactions} persons havs liked your post`}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Post;
