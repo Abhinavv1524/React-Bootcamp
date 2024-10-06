@@ -1,7 +1,6 @@
 import { useRef } from "react";
 import { useDispatch } from "react-redux";
-import { counterActions } from "../store";
-
+import { counterActions } from "../store/counter";
 const Controls = () => {
   const disptach = useDispatch();
   const inputElement = useRef();
