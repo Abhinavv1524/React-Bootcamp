@@ -1,3 +1,6 @@
+import { IoPerson } from "react-icons/io5";
+import { FaHeart } from "react-icons/fa";
+import { IoBagCheck } from "react-icons/io5";
 const Header = () => {
   return (
     <header>
@@ -29,21 +32,17 @@ const Header = () => {
       </div>
       <div className="action_bar">
         <div className="action_container">
-          <span className="material-symbols-outlined action_icon">person</span>
+          <IoPerson />
           <span className="action_name">Profile</span>
         </div>
 
         <div className="action_container">
-          <span className="material-symbols-outlined action_icon">
-            favorite
-          </span>
+          <FaHeart />
           <span className="action_name">Wishlist</span>
         </div>
 
         <a className="action_container" href="pages/bag.html">
-          <span className="material-symbols-outlined action_icon">
-            shopping_bag
-          </span>
+          <IoBagCheck />
           <span className="action_name">Bag</span>
           <span className="bag-item-count">0</span>
         </a>
